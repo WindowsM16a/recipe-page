@@ -55,15 +55,43 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 37rem;
+    max-width: 45rem;
     width: 100%;
     border-radius: 1rem;
     flex-grow: 1;
     flex-shrink: 1;
     padding: 2rem;
     padding-top: 2rem;
-    gap: 10rem;
     background-color: var(--White);
+}
+
+.headings {
+    font-family: "Young";
+    color: var(--Brown-800);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+hr {
+    border: 0.01rem solid rgba(0, 0, 0, 0.218);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+h3 {
+    font-size: clamp(1.75rem, 1vw, 2rem);
+    padding: 1.5rem;
+    padding-left: 0;
+    padding-bottom: 1rem;
+    color: var(--Stone-900)
+}
+
+
+li,
+p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    color: var(--Stone-600);
 }
 
 .omelette-image-text {
@@ -76,7 +104,7 @@ main {
         padding: 1.5rem;
         padding-left: 0;
         padding-bottom: 0.8rem;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw, 3rem);
         color: var(--Stone-900);
     }
 
@@ -88,8 +116,9 @@ main {
 }
 
 .omelette-heading p {
-    color: var(--Stone-900);
-    font-size: 0.8rem;
+    color: var(--Stone-600);
+    font-size: clamp(1rem, 0.4vw, 2rem);
+    font-weight: 400;
     padding-bottom: 1.5rem;
 }
 
@@ -99,8 +128,14 @@ main {
     text-align: left;
     background-color: #FFF5FA;
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    justify-content: space-between;
+    padding-bottom: 1.5rem;
+
+    .preparation-time h2 {
+        padding: 1rem;
+        padding-top: 0;
+        font-size: clamp(1.1rem, 1vw, 2rem);
+        color: var(--Rose-800);
+    }
 
 }
 
@@ -109,13 +144,12 @@ main {
 }
 
 .time li::marker {
+    font-size: clamp(0.7rem, 0.5vw, 1rem);
     color: var(--Rose-800);
-    margin-left: 3rem;
 }
 
 .time li {
-    padding-left: 0.5rem;
-    font-weight: 500;
+    padding-left: 1rem;
     color: var(--Stone-600);
 }
 
@@ -123,35 +157,31 @@ main {
     font-weight: 600;
 }
 
-.preparation-time h2 {
-    padding: 1rem;
-    padding-top: 0;
-    font-size: 1rem;
-    color: var(--Rose-800);
+.ingredients-list {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+
+    li::marker {
+        font-size: 0.7rem;
+        color: var(--Brown-800);
+    }
 }
 
+.ingredients-list li {
+    padding-left: 0.7rem;
 
 
-.headings {
-    font-family: "Young";
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-
-h3 {
-    color: var(--Stone-900)
 }
 
 .nutrition-info {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+    /* display: flex;
+    flex-direction: row;
+    text-decoration: none; */
 
     .calories {
-        display: flex;
+        /* display: flex;
         gap: 1.5rem;
-        flex-direction: row;
+        flex-direction: row; */
         justify-content: center;
         align-items: center;
     }
@@ -198,7 +228,7 @@ h3 {
         max-width: 90%;
         width: 100%;
         border-radius: 0;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .omelette-image img {
