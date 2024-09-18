@@ -12,7 +12,7 @@
 }
 
 /* Font size (paragraph): 16px */
-/* - Mobile: 375px
+/* - Mobile: 375pxh1
 - Desktop: 1440px */
 
 :root {
@@ -21,8 +21,8 @@
     --Stone-150: hsl(30, 18%, 87%);
     --Stone-600: hsl(30, 10%, 34%);
     --Stone-900: hsl(24, 5%, 18%);
-    --Brown-800: hsl(14, 45, 36%);
-    --Rose-800: hsl(332, 51, 32%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
     --Rose-50: hsl(330, 100%, 98%);
 }
 
@@ -41,65 +41,183 @@ body {
     background-color: var(--Stone-100);
     min-height: 100vh;
     font-family: "Outfit";
+}
 
+main {
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 40rem;
+    max-width: 37rem;
+    width: 100%;
     border-radius: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
     padding: 2rem;
     padding-top: 2rem;
     gap: 10rem;
-    background-color: var(--Rose-50);
+    background-color: var(--White);
+}
 
-    .omelette-image-text {
+.omelette-image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .omelette-heading h1 {
+        padding: 1.5rem;
+        padding-left: 0;
+        padding-bottom: 0.8rem;
+        font-size: 2rem;
+        color: var(--Stone-900);
+    }
+
+
+    .omelette-image img {
+        max-width: 100%;
+        border-radius: 0.8rem;
+    }
+}
+
+.omelette-heading p {
+    color: var(--Stone-900);
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.preparation-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #FFF5FA;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+
+}
+
+.time {
+    padding-left: 3rem;
+}
+
+.time li::marker {
+    color: var(--Rose-800);
+    margin-left: 3rem;
+}
+
+.time li {
+    padding-left: 0.5rem;
+    font-weight: 500;
+    color: var(--Stone-600);
+}
+
+.time b {
+    font-weight: 600;
+}
+
+.preparation-time h2 {
+    padding: 1rem;
+    padding-top: 0;
+    font-size: 1rem;
+    color: var(--Rose-800);
+}
+
+
+
+.headings {
+    font-family: "Young";
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+h3 {
+    color: var(--Stone-900)
+}
+
+.nutrition-info {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    .calories {
         display: flex;
-        align-items: center;
+        gap: 1.5rem;
+        flex-direction: row;
         justify-content: center;
-        flex-direction: column;
-
-        .omelette-image img {
-            max-width: 100%;
-            height: auto;
-        }
+        align-items: center;
     }
 
-    .headings {
-        font-family: "Young";
-    }
-
-    .nutrition-info {
-        display: flex;
-        flex-direction: column;
+    .calories li {
         text-decoration: none;
-
-        .calories {
-            display: flex;
-            gap: 1.5rem;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .calories li {
-            text-decoration: none;
-        }
     }
 }
 
 .attribution {
-    font-size: 11px;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: auto;
+    font-size: clamp(8px, 2vw, 11px);
     color: white;
     text-align: center;
-    position: absolute;
     left: 0;
     right: 0;
     bottom: 1.3rem;
+
 }
 
 .attribution a {
     color: var(--White);
+}
+
+
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+
+    body {
+        background-color: var(--White);
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 90%;
+        width: 100%;
+        border-radius: 0;
+        padding: 1rem;
+    }
+
+    .omelette-image img {
+        border-radius: 0;
+    }
+}
+
+footer {
+    height: 1.5rem;
+    padding: 0;
+}
+
+.attribution {
+    padding-top: 3rem;
+    font-size: 11px;
+    color: var(--Stone-900);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--Stone-900);
 }
