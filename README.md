@@ -37,6 +37,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
+- CSS Media Queries
 
 ## Author
 
