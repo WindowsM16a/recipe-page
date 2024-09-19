@@ -80,7 +80,7 @@ hr {
 }
 
 h3 {
-    font-size: clamp(1.75rem, 1vw, 2rem);
+    font-size: clamp(1.9rem, 1vw, 3rem);
     padding: 1.5rem;
     padding-left: 0;
     padding-bottom: 1rem;
@@ -104,7 +104,7 @@ p {
         padding: 1.5rem;
         padding-left: 0;
         padding-bottom: 0.8rem;
-        font-size: clamp(1.5rem, 3vw, 3rem);
+        font-size: clamp(1.7rem, 3vw, 3rem);
         color: var(--Stone-900);
     }
 
@@ -115,9 +115,9 @@ p {
     }
 }
 
-.omelette-heading p {
+.recipe-description {
     color: var(--Stone-600);
-    font-size: clamp(1rem, 0.4vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2rem);
     font-weight: 400;
     padding-bottom: 1.5rem;
 }
@@ -194,44 +194,110 @@ p {
 
 }
 
-.ingredients-list b {
+b {
     font-weight: 600;
 }
 
+.nutrition-description {
+    padding-bottom: 1.7rem;
+}
 
 .nutrition-info {
-    /* display: flex;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    hr {
+        border: 0.01rem solid rgba(0, 0, 0, 0.218);
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem;
+
+    }
+
+}
+
+.nutrition-info .value {
+    color: var(--Brown-800);
+    font-weight: 600;
+    text-align: left;
+}
+
+.nutrition-info li {
+    display: flex;
+    margin-left: 1.8rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.nutrition-info li {
+    margin: 0;
+    padding: 0;
+}
+
+.nutrition-info li:first-child {
+    width: 10%;
+    text-align: right;
+    margin-left: 2rem;
+    margin-right: auto;
+}
+
+.nutrition-info .value {
+    color: var(--Brown-800);
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.nutrition-info hr {
+    border: 0.01rem solid rgba(0, 0, 0, 0.218);
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.calories {
+    display: flex;
     flex-direction: row;
-    text-decoration: none; */
+}
 
-    .calories {
-        /* display: flex;
-        gap: 1.5rem;
-        flex-direction: row; */
-        justify-content: center;
-        align-items: center;
-    }
+.calories li {
+    margin-right: auto;
+}
 
-    .calories li {
-        text-decoration: none;
-    }
+.carbs {
+    display: flex;
+    flex-direction: row;
+}
+
+.carbs li {
+    margin-right: auto;
+}
+
+.protein {
+    display: flex;
+    flex-direction: row;
+}
+
+.protein li {
+    margin-right: auto;
+}
+
+.fat {
+    display: flex;
+    flex-direction: row;
+}
+
+.fat li {
+    margin-right: auto;
 }
 
 .attribution {
-    position: relative;
-    flex-shrink: 0;
-    margin-top: auto;
-    font-size: clamp(8px, 2vw, 11px);
-    color: white;
+    padding: 1rem;
+    font-size: 11px;
+    color: var(--Stone-900);
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 1.3rem;
-
 }
 
 .attribution a {
-    color: var(--White);
+    color: var(--Stone-900);
 }
 
 
@@ -260,20 +326,12 @@ p {
     .omelette-image img {
         border-radius: 0;
     }
-}
 
-footer {
-    height: 1.5rem;
-    padding: 0;
-}
+    b {
+        font-weight: 550;
+    }
 
-.attribution {
-    padding-top: 3rem;
-    font-size: 11px;
-    color: var(--Stone-900);
-    text-align: center;
-}
-
-.attribution a {
-    color: var(--Stone-900);
+    .time b {
+        font-weight: 550;
+    }
 }
