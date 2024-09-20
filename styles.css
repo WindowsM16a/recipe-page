@@ -47,7 +47,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 3rem;
 }
 
 .container {
@@ -104,6 +107,7 @@ p {
         padding-left: 0;
         padding-bottom: 0.8rem;
         font-size: clamp(1.7rem, 3vw, 3rem);
+        font-weight: 400;
         color: var(--Stone-900);
     }
 
@@ -170,8 +174,6 @@ p {
 .ingredients-list li {
     padding-left: 1.3rem;
     padding-bottom: 0.5rem;
-
-
 }
 
 .instructions-list {
