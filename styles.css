@@ -136,7 +136,7 @@ p {
     .preparation-time h2 {
         padding: 1rem;
         padding-top: 0;
-        font-size: clamp(1.1rem, 1vw, 2rem);
+        font-size: clamp(1.2rem, 1vw, 2rem);
         color: var(--Rose-800);
     }
 
@@ -153,6 +153,7 @@ p {
 
 .time li {
     padding-left: 1rem;
+    padding-bottom: 0.5rem;
     color: var(--Stone-600);
 }
 
